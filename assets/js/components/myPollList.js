@@ -5,6 +5,23 @@ export const myPollList = async () => {
   const result = await myFetch(endpoint)
   
   const { current } = result
+  const arrPolls = Object.keys(current).slice(2)
+    
+    arrPolls.map(value =>{
+      const li = document.createElement('li')
 
-  console.log(current);
+      const span_image = document.createElement('span')
+      span_image.textContent = 'IMAGE'
+
+      const span_name = document.createElement('span')
+      span_name.textContent = value
+
+      const span_number = document.createElement('span')
+      span_number.textContent = current[value]
+
+      li.appendChild(span_image, span_name, span_number)
+      ul.appendChild(li)
+    })
+
+  console.log(ul);
 };
