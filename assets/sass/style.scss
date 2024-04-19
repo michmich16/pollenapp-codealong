@@ -1,6 +1,10 @@
 body {
 	background: #4BA598;
 }
+main img{
+    max-width: 30px;
+    max-height: 30px;
+}
 
 #container {
 	margin: 0 auto;
@@ -25,7 +29,8 @@ main ul li {
 
 	img {
 		width: 100%;
-		max-width: 50px;;
+		max-width: 30px;
+        max-height: 30px;
 	}
 
 	* {
